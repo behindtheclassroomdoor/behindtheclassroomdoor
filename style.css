@@ -113,6 +113,36 @@ transform:translateY(-10px) scale(1.03);
 box-shadow:0 20px 30px rgba(0,0,0,0.25);
 }
 
+/* REVIEW BOX */
+
+.review-box{
+margin-top:18px;
+margin-bottom:18px;
+padding:14px;
+background:#eef5e8;
+border-left:4px solid #6ea34a;
+border-radius:10px;
+text-align:left;
+}
+
+.review-heading{
+font-weight:bold;
+font-size:16px;
+margin-top:0;
+margin-bottom:10px;
+color:#2f4f2f;
+}
+
+.review-quote{
+font-size:15px;
+font-style:italic;
+margin:0 0 10px 0;
+}
+
+.review-quote:last-child{
+margin-bottom:0;
+}
+
 /* BUTTON */
 
 .button{
