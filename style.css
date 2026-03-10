@@ -97,10 +97,11 @@ width:auto;
 .hero-title{
 margin:0;
 color:white;
-font-size:clamp(2.4rem,5.8vw,5.5rem);
+font-size:clamp(2.8rem,6vw,5.5rem);
 line-height:1;
 letter-spacing:.02em;
 text-transform:uppercase;
+white-space:nowrap; /* THIS keeps it on one line */
 }
 
 .hero-divider{
@@ -346,18 +347,6 @@ font-weight:600;
 margin:0;
 }
 
-/* POLICY PAGES */
-
-main.content-section .container{
-max-width:960px;
-}
-
-main.content-section .text-panel{
-max-width:760px;
-margin:auto;
-padding:42px;
-}
-
 /* FADE */
 
 .fade-section{
@@ -375,14 +364,9 @@ transform:translateY(0);
 
 @media (max-width:900px){
 
-.hero-top-icons{
-position:static;
-justify-content:center;
-margin-bottom:14px;
-}
-
-.hero-logo{
-height:120px;
+.hero-title{
+white-space:normal; /* allows wrapping on phones */
+font-size:2.5rem;
 }
 
 .hero-nav{
@@ -393,10 +377,6 @@ flex-wrap:wrap;
 .books-grid,
 .contact-grid{
 grid-template-columns:1fr;
-}
-
-.hero-title{
-font-size:2.5rem;
 }
 
 }
@@ -410,14 +390,6 @@ padding-right:18px;
 
 .hero-logo{
 height:95px;
-}
-
-.hero-title{
-font-size:2rem;
-}
-
-.hero-nav{
-gap:24px;
 }
 
 .hero-nav a{
