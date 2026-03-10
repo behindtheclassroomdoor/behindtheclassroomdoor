@@ -16,7 +16,7 @@
 
 <header>
 
-<img src="images/logo.png" class="logo">
+<img src="images/logo.png" class="logo" alt="Behind the Classroom Door logo">
 
 <nav>
 <a href="#about">About</a>
@@ -56,13 +56,19 @@ I began writing to open an honest conversation about what is really happening in
 
 <div class="book">
 
-<img src="images/idontwant.png">
+<img src="images/idontwant.png" alt="Cover of I Don't Want to Go to School Either!">
 
 <h3>I Don’t Want to Go to School Either!</h3>
 
 <p>
 A thoughtful reflection on the realities of teaching today and the pressures quietly shaping life inside modern classrooms.
 </p>
+
+<div class="review-box">
+<p class="review-heading">What readers are saying</p>
+<p class="review-quote">“A powerful and honest reflection on modern teaching.”</p>
+<p class="review-quote">“Thought-provoking, relatable and deeply insightful.”</p>
+</div>
 
 <a class="button" href="https://amzn.eu/d/0gMK4S5Q" target="_blank">
 Buy on Amazon
@@ -74,7 +80,7 @@ Buy on Amazon
 
 <div class="book">
 
-<img src="images/behind.png">
+<img src="images/behind.png" alt="Cover of Behind the Classroom Door">
 
 <h3>Behind the Classroom Door</h3>
 
@@ -90,13 +96,19 @@ An insightful look at the realities shaping modern primary schools, helping pare
 
 <div class="book">
 
-<img src="images/goodmorning.png">
+<img src="images/goodmorning.png" alt="Cover of Good Morning, Miss - I Wrote You a Letter">
 
 <h3>Good Morning, Miss - I Wrote You a Letter</h3>
 
 <p>
 A thoughtful reflection told through the voice of a child, exploring the confusion and sadness some children experience when school becomes overwhelming.
 </p>
+
+<div class="review-box">
+<p class="review-heading">What readers are saying</p>
+<p class="review-quote">“Beautifully written, moving and unforgettable.”</p>
+<p class="review-quote">“A deeply emotional and important read.”</p>
+</div>
 
 <a class="button" href="https://amzn.eu/d/05SETQQU" target="_blank">
 Buy on Amazon
@@ -152,7 +164,6 @@ Facebook page
 
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
 
 const sections = document.querySelectorAll(".fade-section");
@@ -162,9 +173,7 @@ const observer = new IntersectionObserver((entries) => {
 entries.forEach((entry) => {
 
 if (entry.isIntersecting) {
-
 entry.target.classList.add("visible");
-
 }
 
 });
@@ -178,7 +187,6 @@ observer.observe(section);
 });
 
 });
-
 </script>
 
 
