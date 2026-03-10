@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -26,7 +27,7 @@
 </header>
 
 
-<section id="about">
+<section id="about" class="fade-section">
 
 <h2>About</h2>
 
@@ -45,11 +46,13 @@ I began writing to open an honest conversation about what is really happening in
 </section>
 
 
-<section id="books">
+
+<section id="books" class="fade-section">
 
 <h2>Books</h2>
 
 <div class="book-grid">
+
 
 <div class="book">
 
@@ -57,20 +60,16 @@ I began writing to open an honest conversation about what is really happening in
 
 <h3>I Don’t Want to Go to School Either!</h3>
 
-<a class="button" href="https://amzn.eu/d/0gMK4S5Q">Buy on Amazon</a>
+<p>
+A thoughtful reflection on the realities of teaching today and the pressures quietly shaping life inside modern classrooms.
+</p>
+
+<a class="button" href="https://amzn.eu/d/0gMK4S5Q" target="_blank">
+Buy on Amazon
+</a>
 
 </div>
 
-
-<div class="book">
-
-<img src="images/goodmorning.png">
-
-<h3>Good Morning, Miss - I Wrote You a Letter</h3>
-
-<a class="button" href="https://amzn.eu/d/05SETQQU">Buy on Amazon</a>
-
-</div>
 
 
 <div class="book">
@@ -79,16 +78,40 @@ I began writing to open an honest conversation about what is really happening in
 
 <h3>Behind the Classroom Door</h3>
 
-<p>Coming soon</p>
+<p>
+An insightful look at the realities shaping modern primary schools, helping parents better understand the pressures and decisions influencing their child’s experience.
+</p>
+
+<p><strong>Coming soon</strong></p>
 
 </div>
+
+
+
+<div class="book">
+
+<img src="images/goodmorning.png">
+
+<h3>Good Morning, Miss - I Wrote You a Letter</h3>
+
+<p>
+A thoughtful reflection told through the voice of a child, exploring the confusion and sadness some children experience when school becomes overwhelming.
+</p>
+
+<a class="button" href="https://amzn.eu/d/05SETQQU" target="_blank">
+Buy on Amazon
+</a>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<section id="contact">
+
+<section id="contact" class="fade-section">
 
 <h2>Get in Touch</h2>
 
@@ -98,21 +121,22 @@ I began writing to open an honest conversation about what is really happening in
 
 <input type="email" name="email" placeholder="Email" required>
 
-<textarea name="message" placeholder="Message"></textarea>
+<textarea name="message" placeholder="Message" rows="5"></textarea>
 
-<button type="submit">Send</button>
+<button type="submit">Send Message</button>
 
 </form>
 
 <p>Email: contact@behindtheclassroomdoor.co.uk</p>
 
 <p>
-<a href="https://www.facebook.com/behindtheclassroomdoorbooks">
+<a href="https://www.facebook.com/behindtheclassroomdoorbooks" target="_blank">
 Facebook page
 </a>
 </p>
 
 </section>
+
 
 
 <footer>
@@ -124,6 +148,39 @@ Facebook page
 <p>© 2026 Martin Lee</p>
 
 </footer>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+const sections = document.querySelectorAll(".fade-section");
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach((entry) => {
+
+if (entry.isIntersecting) {
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+sections.forEach((section) => {
+observer.observe(section);
+});
+
+});
+
+</script>
+
 
 </body>
 </html>
