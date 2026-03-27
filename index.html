@@ -110,7 +110,106 @@
     </div>
   </section>
 
-  <!-- rest unchanged -->
+  <section id="contact" class="content-section fade-section">
+    <div class="container">
+      <div class="section-heading">
+        <span></span>
+        <h2>Contact</h2>
+        <span></span>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="panel contact-info">
+          <h3>Get in Touch</h3>
+          <p>I’d love to hear from you. If you have any enquiries or just want to say hello, please use the contact form or contact me directly.</p>
+
+          <div class="contact-icons">
+            <a href="https://www.facebook.com/behindtheclassroomdoorbooks" target="_blank" class="icon-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#557b3f">
+                <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9v-2.9h2.5V9.7c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5v1.8h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/>
+              </svg>
+            </a>
+
+            <a href="mailto:contact@behindtheclassroomdoor.co.uk" class="icon-link" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#557b3f">
+                <path d="M2 4h20v16H2V4zm10 9L20 6H4l8 7zm0 2L4 8v10h16V8l-8 7z"/>
+              </svg>
+            </a>
+          </div>
+
+          <p><strong>Email</strong><br>
+          <a href="mailto:contact@behindtheclassroomdoor.co.uk">contact@behindtheclassroomdoor.co.uk</a></p>
+
+          <p><strong>Facebook</strong><br>
+          <a href="https://www.facebook.com/behindtheclassroomdoorbooks" target="_blank">/behindtheclassroomdoorbooks</a></p>
+        </div>
+
+        <div class="panel">
+          <form action="https://formsubmit.co/contact@behindtheclassroomdoor.co.uk" method="POST" class="contact-form">
+            <input type="hidden" name="_subject" value="New message from Behind the Classroom Door website">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-row">
+              <div>
+                <label for="firstname">First Name</label>
+                <input id="firstname" type="text" name="First Name" required>
+              </div>
+              <div>
+                <label for="surname">Surname</label>
+                <input id="surname" type="text" name="Surname" required>
+              </div>
+            </div>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" name="Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="7" required></textarea>
+
+            <button type="submit" class="submit-button">Send</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="images/logo.png" alt="Behind the Classroom Door logo" class="footer-logo">
+
+    <div class="footer-links">
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms and Conditions</a>
+    </div>
+
+    <p>© 2026 Martin Lee</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+});
+</script>
 
 </body>
 </html>
